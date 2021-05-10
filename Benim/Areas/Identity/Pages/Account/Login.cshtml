@@ -64,6 +64,7 @@
                                 <span class="gl-text u-s-m-b-30">If you have an account with us, please log in.</span>
                                 <section>
                                     <form class="l-f-o__form" id="account" method="post">
+                                        <div asp-validation-summary="All" class="text-danger"></div>
                                         <div class="gl-s-api">
                                             <div class="u-s-m-b-15">
 
@@ -92,7 +93,7 @@
 
                                             <label asp-for="Input.Password" class="gl-label" for="login-password">PASSWORD *</label>
 
-                                            <input asp-for="Input.Password" class="input-text input-text--primary-style" type="password" id="login-password" placeholder="Enter Password" >
+                                            <input asp-for="Input.Password" class="input-text input-text--primary-style" type="password" id="login-password" placeholder="Enter Password">
                                         </div>
                                         <div class="gl-inline">
                                             <div class="u-s-m-b-30">

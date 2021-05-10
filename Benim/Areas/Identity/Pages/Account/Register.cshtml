@@ -54,7 +54,8 @@
                         <div class="l-f-o">
                             <div class="l-f-o__pad-box">
                                 <h1 class="gl-h1">PERSONAL INFORMATION</h1>
-                                <form class="l-f-o__form">
+                                <form class="l-f-o__form" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                                    <div asp-validation-summary="All" class="text-danger"></div>
                                     <div class="gl-s-api">
                                         <div class="u-s-m-b-15">
 
@@ -123,21 +124,24 @@
     </div>-->
                                     <div class="u-s-m-b-30">
 
-                                        <label class="gl-label" for="reg-email">E-MAIL *</label>
+                                        <label asp-for="Input.Email" class="gl-label" for="reg-email">E-MAIL *</label>
 
-                                        <input class="input-text input-text--primary-style" type="text" id="reg-email" placeholder="Enter E-mail">
+                                        <input asp-for="Input.Email" class="input-text input-text--primary-style" type="text" id="reg-email" placeholder="Enter E-mail">
+                                        <span asp-validation-for="Input.Email" class="text-danger"></span>
                                     </div>
                                     <div class="u-s-m-b-30">
 
-                                        <label class="gl-label" for="reg-password">PASSWORD *</label>
+                                        <label asp-for="Input.Password" class="gl-label" for="reg-password">PASSWORD *</label>
 
-                                        <input class="input-text input-text--primary-style" type="text" id="reg-password" placeholder="Enter Password">
+                                        <input asp-for="Input.Password" class="input-text input-text--primary-style" type="password" id="reg-password" placeholder="Enter Password">
+                                        <span asp-validation-for="Input.Password" class="text-danger"></span>
                                     </div>
                                     <div class="u-s-m-b-30">
 
-                                        <label class="gl-label" for="reg-password">CONFIRM PASSWORD *</label>
+                                        <label asp-for="Input.ConfirmPassword" class="gl-label" for="reg-password">CONFIRM PASSWORD *</label>
 
-                                        <input class="input-text input-text--primary-style" type="text" id="reg-password" placeholder="Enter Password">
+                                        <input asp-for="Input.ConfirmPassword" class="input-text input-text--primary-style" type="password" id="reg-password" placeholder="Enter Password">
+                                        <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
                                     </div>
 
                                     <div class="u-s-m-b-15">
